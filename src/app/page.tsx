@@ -1,95 +1,152 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+
+import { Box, Flex, Button, Text, HStack, Image, Link } from "@chakra-ui/react";
+import { PiCaretDownBold } from "react-icons/pi";
+import "@fontsource/rubik";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <Box h={"100%"}>
+      <Box bg="#3D3D3E" h="5.5em">
+        <Flex
+          justifyContent={"space-between"}
+          align={"center"}
+          h={"100%"}
+          px="9em"
+        >
+          <HStack spacing={"2em"}>
+            <Button
+              size={"lg"}
+              py={"1.7em"}
+              px={"1.4em"}
+              fontSize={"16px"}
+              bgColor={"white"}
+              borderRadius={"0.5em"}
+              variant={"ghost"}
+            >
+              For Retailer
+            </Button>
+            <Link fontSize={"16px"} color={"white"} fontWeight={"semibold"}>
+              For Supplier
+            </Link>
+          </HStack>
+
+          <HStack color="white" spacing={"2em"} alignItems={"center"}>
+            <HStack spacing={"0.2em"}>
+              <Box>EN</Box>
+              <Box as="span">
+                <PiCaretDownBold />
+              </Box>
+            </HStack>
+            <HStack spacing={"0.5em"}>
+              <Box as="span" fontSize={"22px"}>
+                🇺🇿
+              </Box>
+              <Box as="span">Uzbeikistan</Box>
+              <Box as="span">
+                <PiCaretDownBold />
+              </Box>
+            </HStack>
+          </HStack>
+        </Flex>
+      </Box>
+
+      <Box pt={"2em"} px={"9em"}>
+        <HStack
+          justifyContent={"space-between"}
+          align={"center"}
+          fontSize={"14px"}
+          fontWeight={"semibold"}
+        >
+          <Box fontSize={"24px"} fontFamily={"rubik"} fontWeight={"bold"}>
+            train
+          </Box>
+          <HStack spacing={"2em"}>
+            <Box as="a" href="#">
+              About
+            </Box>
+            <Box as="a" href="#">
+              Pricing
+            </Box>
+            <Box as="a" href="#">
+              Partners
+            </Box>
+            <Box as="a" href="#">
+              Affiliates
+            </Box>
+            <Box as="a" href="#">
+              Customers
+            </Box>
+            <Box as="a" href="#">
+              Blog
+            </Box>
+            <Box as="a" href="#">
+              Contact
+            </Box>
+          </HStack>
+          <HStack spacing={"2em"}>
+            <Box as="a" href="#">
+              Contact admin
+            </Box>
+            <Button fontSize={"14px"} size={"md"} bgColor={"black"}>
+              Log in
+            </Button>
+          </HStack>
+        </HStack>
+      </Box>
+
+      <Box pt={"2em"}>
+        <Flex justifyContent={"space-between"}>
+          <Box pt={"12em"} width={"45%"}>
+            <Box pl={"9.5em"}>
+              <Text
+                fontSize={"5xl"}
+                fontWeight={"bolder"}
+                fontFamily={"Rubik"}
+                pb={"0.1em"}
+                lineHeight={1.1}
+              >
+                Buy directly from suppliers
+              </Text>
+              <Text fontSize={"18px"} noOfLines={2} pt={"1em"}>
+                Connect directly with a diverse network of trusted suppliers. No
+                more middlemen, just direct access to the products you need
+              </Text>
+              <HStack pt={"2.5em"} spacing={6}>
+                <Button size={"lg"}>Create a free account</Button>
+                <Link
+                  textDecoration={"none"}
+                  fontWeight={"semibold"}
+                  fontSize={"16px"}
+                >
+                  Contact sales
+                </Link>
+              </HStack>
+            </Box>
+          </Box>
+          <Box>
+            <Image src="./assets/retailer1.svg" />
+          </Box>
+        </Flex>
+      </Box>
+
+      <Box pt={"2em"} px={"9em"}>
+        <Box>
+          <Text
+            width={"35%"}
+            fontWeight={"semibold"}
+            noOfLines={2}
+            fontSize={"28px"}
+            fontFamily={"Rubik"}
+            lineHeight={1.2}
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+            Assembly partners with suppliers across Uzbekistan
+          </Text>
+          <HStack pt={"3em"} spacing={3}>
+            <Image src="./assets/persil_2.svg" />
+          </HStack>
+        </Box>
+      </Box>
+    </Box>
+  );
 }
